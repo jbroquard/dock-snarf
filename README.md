@@ -28,13 +28,13 @@ http artifacts http://host/artifacts/cca/maul/agate/agate-0.3.3.amd64.tar.gz
 ## usage
 
 chown -R 21:21 /opt/artifacts
-docker run -v /opt/artifacts:/var/html artifacts
-docker run -v /opt/artifacts:/var/ftp uploader
+docker run -v /opt/artifacts:/var/html snarf/artifacts
+docker run -v /opt/artifacts:/var/ftp snarf/uploader
 
 ## build
 ```
-cd proftpd && docker build -t uploader .
-cd nginx && docker build -t artifacts .
+cd proftpd && docker build -t snarf/uploader .
+cd nginx && docker build -t snarf/artifacts .
 docker --help
 ```
 
