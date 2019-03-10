@@ -38,6 +38,18 @@ cd nginx && docker build -t artifacts .
 docker --help
 ```
 
+## puppet deploy
+
+```.pp
+class snarf {
+    # setup /opt/artifacts filesystem
+
+    docker::run { 'uploader' : }
+    docker::run { 'artifacts' : }
+
+}
+
+```
 ## contribute
 
 https://github.com/pahoughton/dock-snarf
