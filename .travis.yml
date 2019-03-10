@@ -1,0 +1,12 @@
+# 2019-02-11 (cc) <paul4hough@gmail.com>
+---
+dist: xenial
+notifications:
+  email:
+    - paul4hough@gmail.com
+services:
+  - docker
+
+script:
+  - docker build -t snarf/uploader proftpd
+  - docker build -t snarf/artifacts nginx
